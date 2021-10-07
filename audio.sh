@@ -55,7 +55,7 @@ remove_sink_by_name $QSYNTH_SINK
 remove_sink_by_name $RECORDING_SINK
 remove_sink_by_name $DEFAULT_SINK
 remove_module_by_name $MIC_LOOPBACK
-remove_source_by_name $DEFAULT_SOURCE
+remove_source_by_name $RECORDING_SOURCE
 
 # If stop argument is passed, then don't start everything.
 if [ "$1" = "stop" ]; then
