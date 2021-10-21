@@ -15,6 +15,16 @@ Scripts for configuring an electronic drumming environment in Linux:
 * `./start.sh`
 * `./stop.sh`
 
+## High Priority Qsynth
+
+* Add the following lines to `/etc/security/limits.conf`:
+  ```
+  @audio           -       rtprio          90
+  @audio           -       memlock         unlimited
+  ```
+* Add your user to the `audio` group: `sudo usermod -a -G audio $USER`
+* Reboot
+
 ## TODO
 
 * Consider switching out pulseaudio & ALSA for JACK to get better
